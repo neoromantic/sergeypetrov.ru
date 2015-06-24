@@ -4,15 +4,18 @@
 # but you can also edit it by hand.
 
 meteor-platform
-autopublish
-insecure
-iron:router
-artisin:stylus-elf
-mquandalle:jade
 coffeescript
-meteorhacks:fast-render
-multiply:iron-router-progress
-rzymek:moment
-rzymek:moment-locale-ru
 underscore
 
+reactive-var
+semantic:ui-reset
+semantic:ui-grid
+semantic:ui-button
+semantic:ui-icon
+semantic:ui-header
+semantic:ui-divider
+semantic:ui-segment
+semantic:ui-list
+mquandalle:jade
+mquandalle:stylus
+iron:router
