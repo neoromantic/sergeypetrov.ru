@@ -8,14 +8,11 @@ coffeescript
 underscore
 
 reactive-var
-semantic:ui-reset
-semantic:ui-grid
-semantic:ui-button
-semantic:ui-icon
-semantic:ui-header
-semantic:ui-divider
-semantic:ui-segment
-semantic:ui-list
 mquandalle:jade
 mquandalle:stylus
 iron:router
+semantic:ui
+flemay:less-autoprefixer
+http
+email
+okgrow:analytics

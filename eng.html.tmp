@@ -1,0 +1,35 @@
+<body>
+	<div class="container">
+		<div class="about">
+			<p>I design and audit web services, systems, applications.
+			<p>If you have a product that you want to make better or more effective — I can help with that.
+			<p>I live in Moscow, Russia.
+		</div>
+		<div class="contacts">
+			<div class="primary">
+				<a href="mailto:sergey.petrov@me.com" class="email">sergey.petrov@me.com</a><br/>
+				<a href="skype:qalcool?chat" class="skype">skype</a>
+			</div>
+			<div class="secondary">
+				<a href="http://facebook.com/neoromantic" class="facebook">Facebook</a><br/>
+				<a href="http://twitter.com/neoromantic" class="twitter">Twitter</a><br/>
+				<a href="http://www.linkedin.com/pub/sergey-petrov/15/76/999" class="linkedin">LinkedIn</a>
+			</div>
+			<div class="misc">
+				<a href="" class="lang" onclick="setLang('ru');">По-русски</a>
+			</div>
+		</div>
+		<div class="finance">
+			<div class="bitcoin">
+				<header>My bitcoin address: </header>
+				<address>1AECVB8hgJMY7KJWwTbh4VUgTEN5Y91uG6</address>
+			</div>
+			<div class="rocket">
+				<a href="/">Send money via Visa/Mastercard (no transaction fees)</a>
+			</div>
+		</div>
+		<blockquote>
+			<p>A human being should be able to change a diaper, plan an invasion, butcher a hog, conn a ship, design a building, write a sonnet, balance accounts, build a wall, set a bone, comfort the dying, take orders, give orders, cooperate, act alone, solve equations, analyze a new problem, pitch manure, program a computer, cook a tasty meal, fight efficiently, die gallantly.</p><p>Specialization is for insects.</p>
+		</blockquote>
+	</div>
+</body>

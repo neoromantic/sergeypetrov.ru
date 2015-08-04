@@ -1,0 +1,173 @@
+template(name="home")
+	.ui.container
+		.disclaimer.ui.padded.grid
+			.equal.height.row
+				.twelve.wide.computer.ten.wide.tablet.sixteen.wide.mobile.middle.aligned.column
+					.ui.large.header Меня зовут Сергей. Я решаю ваши IT-задачи.
+					p Я проектирую, разрабатываю и провожу аудит веб-сервисов, информационных систем и приложений, а также, помогаю командам и деловым людям в решении любых вопросов, касающихся информационных технологий.
+					p
+						| У вас сгорел сервер, уволились все программисты, нужно срочно запустить интернет-магазин или наладить процессы во всей компании? Я знаю что делать (или кого позвать) и могу начать сегодня.
+					p
+						| Я живу и работаю в Москве. Мои условия просты и удобны.
+				.computer.only.tablet.only.right.aligned.four.wide.computer.six.wide.tablet.column
+					img.portrait(src="/portrait.jpg")
+
+	+speciality
+
+	+cases
+
+	+contacts
+
+	+footer
+	
+	+consultModal
+
+template(name="footer")
+	.footer
+		.ui.quote
+			| Человек должен быть способен сменить подгузник, спланировать вторжение, забить свинью, управлять кораблем, спроектировать здание, написать сонет, подвести счета, построить стену, вправить кость, успокоить умирающего, выполнять приказы, отдавать приказы, взаимодействовать, действовать самостоятельно, решать уравнения, анализировать новые проблемы, разбрасывать навоз, написать программу, вкусно готовить, эффективно сражаться и достойно умирать. 
+			p Специализация — для насекомых.
+			.freeConsult.ui.inverted.green.huge.button Срочная бесплатная консультация
+
+template(name="cases")
+	.cases.ui.container
+		.ui.horizontal.divider.small.header Некоторые клиенты и проекты
+		.caseList
+			.ui.padded.stackable.grid
+				.three.columns.row
+					+case(title="Robonect" subtitle="Мониториг и удалённое управление в закрытых сетях")
+					+case(title="Sobabox" href="http://sobabox.ru" subtitle="Нужные вещи для вашей собаки каждый месяц")
+					+case(title="inTaxi" href="http://intaxi.ru" subtitle="Первый агрегатор такси в России")
+				.three.columns.row
+					+case(title="Zoon" href="http://zoon.ru" subtitle="Каталог городских мест и услуг")
+					+case(title="Quantum pharmaceuticals" href="http://q-pharm.com" subtitle="Биотехнологии, разработка новых лекарств")
+					+case(title="OMD / BBDO" href="http://omd.com" subtitle="Крупнейшее медийное агенство")
+				.three.columns.row
+					+case(title="whatmatters" subtitle="Профессиональное ПО для игроков в онлайн-покер")
+					+case(title="Ruspod" href="http://ruspod.com" subtitle="Обучение русскому языку как иностранному")
+					+case(title="Яндекс.Маркет" href="http://market.yandex.ru" subtitle="Главная e-commerce платформа Рунета")
+
+template(name="case")
+	.case.column
+		if href
+			a.ui.small.link.blue.header(href=href)
+				| {{ title }}
+		else
+			.ui.small.header
+				| {{ title }}
+		.subtitle {{ subtitle }}
+
+template(name="speciality")
+	.speciality.ui.container
+		.ui.divider
+		.ui.padded.relaxed.doubling.stackable.grid
+			.three.column.row
+				
+				.column
+					.ui.header Продуктам и проектам
+					.ui.relaxed.list
+						.item Проектирование веб-сервисов
+						.item Аудит программных продуктов и процессов разработки
+						.item Проектирование и оптимизация UI
+						.item Разработка стратегий запуска и развития сервисов
+						.item Технический анализ поведения клиентов
+						.item Глубокое прототипирование веб-сервисов
+						.item Срочная разработка и запуск проектов
+						.item Тексты на русском и английском языках
+						.item Управление процессом графического дизайна
+
+				.column
+					.ui.header Компаниям и стартапам
+					.ui.relaxed.list
+						.item Организация внутренних и внешних коммуникаций
+						.item Команды, работающие удалённо
+						.item Управление проектами и задачами внутри команды
+						.item Отсев и собеседования кандидатов
+						.item Подбор подрядчиков для разработки ПО
+						.item Консультации стартапов
+						.item Поиск оптимальных выходов из кризисных ситуаций
+						.item Питчи, презентации
+						.item Skype-консультации
+
+				.column
+					.ui.header Технологии и экспертиза
+					.ui.relaxed.list
+						.item Полный спектр frontend-технологий
+						.item Meteor, node.js, Javascript (ES6), CoffeeScript
+						.item Деплоймент, Continious Integration, виртуализация
+						.item Автоматизация тестирования всех видов
+						.item blockchain/bitcoin, darkweb
+						.item Бонусные схемы, внутренние экономики, геймификация
+						.item Python, MongoDB, Redis, influxDB
+						.item Системы ERP, CRM
+						.item Приложения iOS: проектирование, разработка, запуск
+
+	.freeConsult.ui.inverted.center.aligned.segment
+		span.freeConsultText Опишите свою проблему и я сегодня же помогу вам (бесплатно)
+		.freeConsult.ui.larger.inverted.green.button Бесплатная консультация
+
+template(name="contacts")
+	.contacts.ui.container
+		.ui.horizontal.divider.small.header Средства связи 
+		.ui.padded.doubling.stackable.grid
+			.equal.height.three.columns.row
+				.column
+					.item.email
+						i.mail.icon
+						a(href="mailto:sergey.petrov@me.com")
+							|sergey.petrov@me.com
+					.item.phone
+						i.text.telephone.icon
+						|+7 926 140 8252
+					.item.skype
+						i.skype.icon
+						a(href="skype:qalcool?chat")
+							| qalcool
+
+				.column
+					.item.facebook
+						i.facebook.icon
+						a(href="http://facebook.com/neoromantic" rel="me")
+							| neoromantic
+					.item.twitter
+						i.twitter.icon
+						a(href="http://twitter.com/neoromantic" rel="me")
+							| @neoromantic
+					.item.linkedin
+						i.linkedin.icon
+						a(href="http://www.linkedin.com/pub/sergey-petrov/15/76/999" rel="me")
+							| LinkedIn
+
+				.column
+					.item.rocketbank
+						i.credit.card.icon
+						a(href="http://rocketbank.ru/sergey.petrov")
+							| Перевод c VISA/Mastercard
+
+					.item.bitcoin
+						i.bitcoin.icon
+						| 1AECVB8hgJMY7KJWwTbh4VUgTEN5Y91uG6
+	
+template(name="consultModal")
+	.ui.modal
+		//- .ui.header Срочная бесплатная консультация
+		.content
+			p
+				|Я поделюсь с вами своей экспертизой и знаниями, предостерегу от неверных или опасных решений, дам ссылки на онлайн-сервисы или ПО, на которое вам стоит взглянуть. Если понадобится, мы поговорим по телефону или скайпу. Если ваша задача тянет на проект — я сделаю предложение о сотрудничестве или предложу помощь моих партнеров.
+				
+			p 
+				|Опишите вашу ситуацию, расскажите о вашей проблеме как можно подробнее. Дайте ссылки на сайты, схемы, спецификации, относящиеся к задаче.
+				strong Вы получите ответ сегодня же.
+			p Если вы хотите приложить файлы, отправьте их на мою почту: 
+				a(href="mailto:sergey.petrov@me.com") sergey.petrov@me.com
+
+			.ui.form
+				.field
+					label Адрес электронной почты, телефон, скайп или любой другой удобный вам способ для ответа
+					input(type="text" name="email")
+				.field
+					label Подробное описание вашей задачи или проблемы
+					textarea(rows="8" name="description" placeholder="Пожалуйста, не забудьте представить себя, свою компанию и проект. Чем больше контекста и подробностей вы дадите, тем легче мне будет ответить вам полезным для вас образом.")
+		.actions
+			.ui.cancel.button Отменить
+			.ui.approve.positive.button(class="{{#unless canSubmit}}disabled{{/unless}}") Отправить

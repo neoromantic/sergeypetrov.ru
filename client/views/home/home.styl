@@ -3,18 +3,40 @@
 		align-self center
 
 .saulGag
-	color #999
+	color #dadada
 	font-style italic
 
 .portrait
 	width 200px
 	height 200px
-	border-radius 15px
+	// border-radius 15px
 
 .footer
+	height 100%
+	padding-top 1em
 	padding-bottom 3em
+	display flex
+
+	.ui.quote
+		width 60%
+		margin 0 auto
+		font-size 140%
+		line-height 1.6
+		font-family 'Georgia'
+		font-style italic
+		color #ddd
+		// text-shadow: 1px 1px 4px rgba(200,200,200,1)
+		align-self center
+		text-align center
+
+		p
+			margin-top 1em
+
+		.button
+			margin-top 3em
 
 .contacts
+	padding-bottom 20em
 
 	.item
 		line-height 2
@@ -26,27 +48,41 @@
 		white-space normal
 		word-break break-all
 
-.showCase
-	display none
+.freeConsultText
+	margin-right 4em !important
+	line-height 4em
 
 .cases
 
-	padding-top 1em !important
-	padding-bottom 2em !important
+	padding-top 3em !important
+	padding-bottom 1em !important
 
 	.header
 		font-weight normal
 
-	.dividing.header
-		color rgba(255,255,255,0.7)
+	.divider.header
+		font-weight bold !important
+
+	// .dividing.header
+	// 	color rgba(0,0,0,0.7)
 
 	.case
 
-		cursor pointer
+		// cursor pointer
+		height 100px
+		padding 1em
 
 		.ui.header
-			text-decoration underline
+			// text-decoration underline
 			margin-bottom 0
 
-		.subtitle
-			color rgba(255,255,255,0.7)
+		.ui.link.header
+			text-decoration underline
+
+		&:hover
+			background-color #eaeaea
+
+		// .subtitle
+		// 	color rgba(255,255,255,0.7)
+.freeConsult
+	border-radius 0 !important
