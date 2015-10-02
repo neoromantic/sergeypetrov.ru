@@ -6,11 +6,11 @@ template(name="home")
 					.ui.large.header Меня зовут Сергей. Я решаю ваши IT-задачи.
 					p Я проектирую, разрабатываю и провожу аудит веб-сервисов, информационных систем и приложений, а также, помогаю командам и деловым людям в решении любых вопросов, касающихся информационных технологий.
 					p
-						| У вас сгорел сервер, уволились все программисты, нужно срочно запустить интернет-магазин или наладить процессы во всей компании? Я знаю что делать (или кого позвать) и могу начать сегодня.
+						| У вас сгорел дата-центр, уволились все программисты, нужно срочно запустить интернет-магазин или наладить процессы во всей компании? Я знаю что делать и могу начать сегодня.
 					p
 						| Я живу и работаю в Москве. Мои условия просты и удобны.
 				.computer.only.tablet.only.right.aligned.four.wide.computer.six.wide.tablet.column
-					img.portrait(src="/portrait.jpg")
+					img.portrait(src="/portrait2.jpg")
 
 	+speciality
 
@@ -22,30 +22,26 @@ template(name="home")
 	
 	+consultModal
 
-template(name="footer")
-	.footer
-		.ui.quote
-			| Человек должен быть способен сменить подгузник, спланировать вторжение, забить свинью, управлять кораблем, спроектировать здание, написать сонет, подвести счета, построить стену, вправить кость, успокоить умирающего, выполнять приказы, отдавать приказы, взаимодействовать, действовать самостоятельно, решать уравнения, анализировать новые проблемы, разбрасывать навоз, написать программу, вкусно готовить, эффективно сражаться и достойно умирать. 
-			p Специализация — для насекомых.
-			.freeConsult.ui.inverted.green.huge.button Срочная бесплатная консультация
-
 template(name="cases")
 	.cases.ui.container
 		.ui.horizontal.divider.small.header Некоторые клиенты и проекты
 		.caseList
 			.ui.padded.stackable.grid
 				.three.columns.row
-					+case(title="Robonect" subtitle="Мониториг и удалённое управление в закрытых сетях")
-					+case(title="Sobabox" href="http://sobabox.ru" subtitle="Нужные вещи для вашей собаки каждый месяц")
-					+case(title="inTaxi" href="http://intaxi.ru" subtitle="Первый агрегатор такси в России")
+					+case(title="Профисеть" href="http://www.2test.ru/catalog/uchet-i-analiz-setevoy-infrast/ustroystvo-distantsionnogo-monitoringa-dostupa-i-upravleniya-it-infrastruktury-2test-profiset/" subtitle="Удалённое управление в корпоративных сетях" role="Руководство разработкой ПО, проектирование и программирование frontend")
+					+case(title="Sobabox" href="http://sobabox.ru" subtitle="Нужные вещи для вашей собаки каждый месяц" role="Основатель проекта, технический директорй")
+					+case(title="inTaxi" href="http://intaxi.ru" subtitle="Первый агрегатор такси в России" role="Сооснователь, директор по продукту и технологиям")
 				.three.columns.row
-					+case(title="Zoon" href="http://zoon.ru" subtitle="Каталог городских мест и услуг")
-					+case(title="Quantum pharmaceuticals" href="http://q-pharm.com" subtitle="Биотехнологии, разработка новых лекарств")
-					+case(title="OMD / BBDO" href="http://omd.com" subtitle="Крупнейшее медийное агенство")
+					+case(title="Zoon" href="http://zoon.ru" subtitle="Каталог городских мест и услуг" role="Исследование поведения пользователей, оптимизация UI")
+					+case(title="Quantum pharmaceuticals" href="http://q-pharm.com" subtitle="Биотехнологии, разработка новых лекарств" role="Консультации по управлению проектами и внутренним коммуникациям")
+					+case(title="OMD / BBDO" href="http://omd.com" subtitle="Крупнейшее медийное агенство" role="Аудит процесса разработки и текущего состояния крупной ERP-системы")
 				.three.columns.row
-					+case(title="whatmatters" subtitle="Профессиональное ПО для игроков в онлайн-покер")
-					+case(title="Ruspod" href="http://ruspod.com" subtitle="Обучение русскому языку как иностранному")
-					+case(title="Яндекс.Маркет" href="http://market.yandex.ru" subtitle="Главная e-commerce платформа Рунета")
+					+case(title="whatmatters" subtitle="Профессиональное ПО для игроков в покер" role="Сооснователь, внутренние коммуникации, UI/UX, брендинг")
+					+case(title="Ruspod" href="http://ruspod.com" subtitle="Обучение русскому языку как иностранному" role="Сооснователь, технический директор")
+					+case(title="Яндекс.Маркет" href="http://market.yandex.ru" subtitle="Главная e-commerce платформа Рунета" role="Менеджер проекта, аналитик")
+				.three.columns.row
+					+case(title="dcdnet" href="http://dcdnet.ru" subtitle="Экспертное музыкальное сообщество" role="Сооснователь, директор по продукту и технологиям")
+
 
 template(name="case")
 	.case.column
@@ -56,6 +52,8 @@ template(name="case")
 			.ui.small.header
 				| {{ title }}
 		.subtitle {{ subtitle }}
+		if role
+			.role {{ role }}
 
 template(name="speciality")
 	.speciality.ui.container
@@ -104,7 +102,7 @@ template(name="speciality")
 
 	.freeConsult.ui.inverted.center.aligned.segment
 		span.freeConsultText Опишите свою проблему и я сегодня же помогу вам (бесплатно)
-		.freeConsult.ui.larger.inverted.green.button Бесплатная консультация
+		.freeConsult.ui.larger.inverted.button Бесплатная консультация
 
 template(name="contacts")
 	.contacts.ui.container
@@ -147,6 +145,13 @@ template(name="contacts")
 					.item.bitcoin
 						i.bitcoin.icon
 						| 1AECVB8hgJMY7KJWwTbh4VUgTEN5Y91uG6
+						+ticker
+	
+template(name="ticker")
+	if Template.subscriptionsReady
+		p.ticker 
+			| 1 BTC = ${{ priceFormat ticker.btc_usd.last }}, {{ priceFormat ticker.btc_rur.last}}
+			i.ruble.icon
 	
 template(name="consultModal")
 	.ui.modal
@@ -155,9 +160,6 @@ template(name="consultModal")
 			p
 				|Я поделюсь с вами своей экспертизой и знаниями, предостерегу от неверных или опасных решений, дам ссылки на онлайн-сервисы или ПО, на которое вам стоит взглянуть. Если понадобится, мы поговорим по телефону или скайпу. Если ваша задача тянет на проект — я сделаю предложение о сотрудничестве или предложу помощь моих партнеров.
 				
-			p 
-				|Опишите вашу ситуацию, расскажите о вашей проблеме как можно подробнее. Дайте ссылки на сайты, схемы, спецификации, относящиеся к задаче.
-				strong Вы получите ответ сегодня же.
 			p Если вы хотите приложить файлы, отправьте их на мою почту: 
 				a(href="mailto:sergey.petrov@me.com") sergey.petrov@me.com
 
@@ -166,8 +168,15 @@ template(name="consultModal")
 					label Адрес электронной почты, телефон, скайп или любой другой удобный вам способ для ответа
 					input(type="text" name="email")
 				.field
-					label Подробное описание вашей задачи или проблемы
+					label Чем я могу быть полезен?
 					textarea(rows="8" name="description" placeholder="Пожалуйста, не забудьте представить себя, свою компанию и проект. Чем больше контекста и подробностей вы дадите, тем легче мне будет ответить вам полезным для вас образом.")
 		.actions
 			.ui.cancel.button Отменить
 			.ui.approve.positive.button(class="{{#unless canSubmit}}disabled{{/unless}}") Отправить
+
+template(name="footer")
+	.footer
+		.ui.quote
+			| Человек должен быть способен сменить подгузник, спланировать вторжение, забить свинью, управлять кораблем, спроектировать здание, написать сонет, подвести счета, построить стену, вправить кость, успокоить умирающего, выполнять приказы, отдавать приказы, взаимодействовать, действовать самостоятельно, решать уравнения, анализировать новые проблемы, разбрасывать навоз, написать программу, вкусно готовить, эффективно сражаться и достойно умирать. Специализация — для насекомых.
+			p
+				.freeConsult.ui.inverted.huge.button Срочная бесплатная консультация

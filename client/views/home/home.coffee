@@ -3,16 +3,20 @@ Template.consultModal.onRendered ->
 	@$('.modal').modal
 		detachable: false
 		onShow: ->
-			analytics.track "Consult modal showed"
+			analytics?.page "consult"
 		onDeny: ->
-			analytics.track "Consult modal closed"
+			analytics?.track "home"
 		onApprove: =>
 			email = @$('[name="email"]').val()
 			text = @$('[name="description"]').val()
 			Meteor.call 'requestConsult', email, text
-			analytics.track "Consult requested",
-				email: email
-				text: text
+
+Template.ticker.onCreated ->
+	@subscribe 'BTCCurrent'
+
+Template.ticker.helpers
+
+	ticker: -> BTC.findOne()
 
 Template.consultModal.helpers
 
@@ -23,7 +27,7 @@ Template.consultModal.events
 		Session.set "canSubmit", _.every $('input[type="text"],textarea'), (el) -> $(el).val().length > 0
 
 Template.home.onRendered ->
-	analytics.page('home')
+	analytics?.page('home')
 
 	$('.footer').visibility
 		once: false

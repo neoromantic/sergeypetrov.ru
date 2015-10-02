@@ -25,7 +25,7 @@
   // Configure environment
   // ROOT_URL must be set to your correct domain (https or http)
   "env": {
-    "PORT": 80,
+    "PORT": 8001,
     "ROOT_URL": "http://sergeypetrov.ru"
   },
 
